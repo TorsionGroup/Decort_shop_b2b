@@ -1,0 +1,69 @@
+{% load history_tags %}
+{% load basket_tags %}
+{% load currency_filters %}
+{% load image_tags %}
+{% load i18n %}
+{% load static %}
+
+
+<div class="offcanvas-minicart_wrapper" id="miniCart">
+    <div class="offcanvas-menu-inner">
+        <a href="#" class="btn-close"><i class="ion-android-close"></i></a>
+
+        {% if request.basket.num_lines %}
+            {% for line in request.basket.all_lines %}
+
+                <div class="minicart-content">
+                    <div class="minicart-heading">
+                        <h4>{% trans "Basket" %}</h4>
+                    </div>
+                    <ul class="minicart-list">
+                        <li class="minicart-product">
+                            <div class="product-item_img">
+                                {% with image=line.product.primary_image %}
+                                    {% oscar_thumbnail image.original "100x100" upscale=False as thumb %}
+                                    <a href="{{ line.product.get_absolute_url }}">
+                                        <img class="thumbnail" src="{{ thumb.url }}" alt="{{ line.product.get_title }}">
+                                    </a>
+                                {% endwith %}
+                            </div>
+                            <div class="product-item_content">
+                                <a class="product-item_title" href="{{ line.product.get_absolute_url }}">
+                                    {{ line.description }}</a>
+                                <span class="product-item_quantity">{{ line.quantity }} x
+                                    {{ line.unit_price_excl_tax|currency:request.basket.currency }}</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            {% endfor %}
+
+            <div class="minicart-item_total">
+
+                {% if request.basket.is_tax_known %}
+                    <span>{% trans "Total:" %}</span>
+                    <span class="ammount">
+                    {{ request.basket.total_incl_tax|currency:request.basket.currency }}
+                    </span>
+                {% else %}
+                    <span>{% trans "Total:" %}</span>
+                    <span class="ammount">
+                    {{ request.basket.total_excl_tax|currency:request.basket.currency }}
+                    </span>
+                {% endif %}
+
+            </div>
+            <div class="minicart-btn_area">
+                <a href="{% url 'basket:summary' %}"
+                   class="torsion-btn torsion-btn_dark torsion-btn_fullwidth">{% trans "View basket" %}</a>
+            </div>
+            <div class="minicart-btn_area">
+                <a href="{% url 'checkout:index' %}" class="torsion-btn torsion-btn_dark torsion-btn_fullwidth"><i
+                        class="icon-shopping-cart"></i> {% trans "Checkout" %}</a>
+            </div>
+        {% else %}
+        {% endif %}
+
+    </div>
+</div>

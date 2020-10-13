@@ -1,0 +1,164 @@
+{% load currency_filters %}
+{% load i18n %}
+{% load static %}
+
+<div class="mobile-menu_wrapper" id="mobileMenu">
+    <div class="offcanvas-menu-inner">
+        <div class="container">
+            <a href="#" class="btn-close"><i class="ion-android-close"></i></a>
+            <div class="offcanvas-inner_search">
+                <form action="#" class="inner-searchbox">
+                    <input type="text" placeholder="Search for item...">
+                    <button class="search_btn" type="submit"><i class="ion-ios-search-strong"></i></button>
+                </form>
+            </div>
+            <nav class="offcanvas-navigation">
+                <ul class="mobile-menu">
+                    <li class="menu-item-has-children active"><a href="{% url 'home' %}"><span
+                            class="mm-text">Home</span></a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="{% url 'home' %}">
+                                    <span class="mm-text">Home One</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children">
+                        <a href="shop-left-sidebar.html">
+                            <span class="mm-text">Shop</span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li class="menu-item-has-children">
+                                <a href="shop-left-sidebar.html">
+                                    <span class="mm-text">Grid View</span>
+                                </a>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a href="shop-grid-fullwidth.html">
+                                            <span class="mm-text">Column Three</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children">
+                        <a href="blog-left-sidebar.html">
+                            <span class="mm-text">Blog</span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li class="menu-item-has-children has-children">
+                                <a href="blog-left-sidebar.html">
+                                    <span class="mm-text">Grid View</span>
+                                </a>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a href="blog-2-column.html">
+                                            <span class="mm-text">Column Two</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu-item-has-children has-children">
+                                <a href="blog-gallery-format.html">
+                                    <span class="mm-text">Blog Format</span>
+                                </a>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a href="blog-gallery-format.html">
+                                            <span class="mm-text">Gallery Format</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="blog-audio-format.html">
+                                            <span class="mm-text">Audio Format</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="blog-video-format.html">
+                                            <span class="mm-text">Video Format</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children">
+                        <a href="{% url 'home' %}">
+                            <span class="mm-text">Pages</span>
+                        </a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="my-account.html">
+                                    <span class="mm-text">My Account</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="login-register.html">
+                                    <span class="mm-text">Login | Register</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="wishlist.html">
+                                    <span class="mm-text">Wishlist</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="cart.html">
+                                    <span class="mm-text">Cart</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <nav class="offcanvas-navigation user-setting_area">
+                <ul class="mobile-menu">
+                    <li class="menu-item-has-children active"><a href="javascript:void(0)"><span
+                            class="mm-text">User Setting</span></a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="my-account.html">
+                                    <span class="mm-text">My Account</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="login-register.html">
+                                    <span class="mm-text">Login | Register</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children"><a href="javascript:void(0)"><span
+                            class="mm-text">Currency</span></a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <span class="mm-text">EUR €</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <span class="mm-text">USD $</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children"><a href="javascript:void(0)"><span
+                            class="mm-text">Language</span></a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <span class="mm-text">English</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,189 @@
+{% load currency_filters %}
+{% load i18n %}
+{% load static %}
+
+
+<div class="header-top_area d-lg-block d-none">
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-xl-6 col-lg-5">
+                <div class="main-menu_area position-relative">
+                    <nav class="main-nav">
+                        <ul>
+                            <li><a href="{% url 'home' %}">{% trans "Home" %}</a></li>
+                            <li><a href="{% url 'catalogue:index' %}">{% trans "All products" %}</a></li>
+                            <li><a href="{% url 'offer:list' %}">{% trans "Offers" %}</a></li>
+                            <li><a href="{% url 'news' %}">{% trans "News" %}</a></li>
+                            <li><a href="{% url 'aboutus' %}">{% trans "About Us" %}</a></li>
+                            <li><a href="{% url 'contacts' %}">{% trans "Contacts" %}</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="col-xl-6 col-lg-7">
+                <div class="ht-right_area">
+                    <div class="ht-menu">
+
+                        <ul>
+                            <li><a href="javascript:void(0)">
+                                <span>$</span> <span>Currency</span><i class="ion-ios-arrow-down"></i></a>
+                                <ul class="ht-dropdown ht-currency">
+                                    <li><a href="javascript:void(0)">€ EUR</a></li>
+                                    <li class="active"><a href="javascript:void(0)">£ Pound Sterling</a></li>
+                                    <li><a href="javascript:void(0)">$ Us Dollar</a></li>
+                                </ul>
+                            </li>
+
+                            {% block nav_account_languages %}
+                                {% if LANGUAGES|length > 1 %}
+
+                                    {% get_language_info_list for LANGUAGES as languages %}
+                                    <li>
+                                        <form action="{% url "set_language" %}" method="post"
+                                              class="navbar-form navbar-right">
+                                            {% csrf_token %}
+                                            <div class="form-group">
+                                            <span>
+                                            <img src="{% static 'oscar/img/flags/{{ language.code }}.png' %}">
+                                            </span>
+                                                <select name="language" class="form-control"
+                                                        onchange="this.form.submit()">
+                                                    {% for language in languages %}
+
+                                                        <option value="{{ language.code }}"
+                                                                {% if language.code == LANGUAGE_CODE %}selected="selected"{% endif %}>
+                                                            {{ language.name_local }}
+                                                        </option>
+                                                    {% endfor %}
+                                                </select>
+                                            </div>
+                                        </form>
+                                    </li>
+
+                                {% endif %}
+                            {% endblock %}
+
+
+                            <li><a href="javascript:void(0)">
+                                <span class="ion-ios-person-outline"></span> <span>My Account</span>
+                                <i class="ion-ios-arrow-down"></i></a>
+                                <ul class="ht-dropdown">
+                                    {% if user.is_authenticated %}
+                                        {% block nav_account_navbar_authenticated %}
+                                            <li>
+                                                {% if num_unread_notifications > 0 %}
+                                                    {# If user has new notifications - we change account link to go to inbox #}
+                                                    <a href="{% url 'customer:notifications-inbox' %}">
+                                                        <i class="icon-user"></i>
+                                                        {% trans "Account" %}
+                                                        <span class="label label-warning">{{ num_unread_notifications }}</span>
+                                                    </a>
+                                                {% else %}
+                                                    <a href="{% url 'customer:summary' %}">
+                                                        <i class="icon-user"></i> {% trans "Account" %}
+                                                    </a>
+                                                {% endif %}
+                                            </li>
+                                            {% if user.is_staff or perms.partner.dashboard_access %}
+                                                <li><a href="{% url 'dashboard:index' %}">
+                                                    <i class="icon-list-ul"></i> {% trans "Dashboard" %}</a></li>
+                                            {% endif %}
+                                            <li><a id="logout_link" href="{% url 'customer:logout' %}">
+                                                <i class="icon-signout"></i> {% trans "Logout" %}</a></li>
+                                        {% endblock %}
+                                    {% else %}
+                                        <li><a id="login_link" href="{% url 'customer:login' %}"><i
+                                                class="icon-signin"></i> {% trans "Login " %}</a></li>
+                                    {% endif %}
+                                </ul>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="header-top_area header-sticky bg--sapphire">
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-xl-8 col-lg-7 d-lg-block d-none">
+                <div class="main-menu_area position-relative">
+                    <nav class="main-nav">
+                        <ul>
+                            <li class=""><a href="{% url 'home' %}">{% trans "Home" %}</a></li>
+                            <li class=""><a href="{% url 'catalogue:index' %}">{% trans "All products" %}</a></li>
+                            <li class=""><a href="{% url 'offer:list' %}">{% trans "Offers" %}</a></li>
+                            <li class=""><a href="{% url 'news' %}">{% trans "News" %}</a></li>
+                            <li class=""><a href="{% url 'aboutus' %}">{% trans "About Us" %}</a></li>
+                            <li class=""><a href="{% url 'contacts' %}">{% trans "Contacts" %}</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="col-sm-3 d-block d-lg-none">
+                <div class="header-logo_area header-sticky_logo">
+                    <a href="{% url 'home' %}">
+                        <img src="{% static 'oscar/img/torsion_logo.png' %}">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-xl-4 col-lg-5 col-sm-9">
+                <div class="header-right_area">
+                    <ul>
+                        <li class="mobile-menu_wrap d-flex d-lg-none">
+                            <a href="#mobileMenu" class="mobile-menu_btn toolbar-btn color--white">
+                                <i class="ion-navicon"> </i>
+                            </a>
+                        </li>
+
+                        <li class="minicart-wrap">
+
+                            <a href="#miniCart" class="minicart-btn toolbar-btn">
+
+                                <div class="minicart-count_area">
+                                    <span class="item-count"> </span>
+                                    <i class="ion-bag"> </i>
+                                </div>
+
+                                {% if not request.basket.is_empty %}
+                                    {% if request.basket.is_tax_known %}
+                                        {% blocktrans with total=request.basket.total_incl_tax|currency:request.basket.currency %}
+                                            <div class="minicart-front_text">
+                                                <span class="total-price">{{ total }}</span>
+                                            </div>
+                                        {% endblocktrans %}
+                                    {% else %}
+                                        {% blocktrans with total=request.basket.total_excl_tax|currency:request.basket.currency %}
+                                            <div class="minicart-front_text">
+                                                <span class="total-price">{{ total }}</span>
+                                            </div>
+                                        {% endblocktrans %}
+                                    {% endif %}
+                                {% endif %}
+
+                            </a>
+
+                        </li>
+
+                        <li class="contact-us_wrap">
+                            <a href="tel://+380672244702"><i class="ion-android-call"></i>+38 067 22 44 702</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
