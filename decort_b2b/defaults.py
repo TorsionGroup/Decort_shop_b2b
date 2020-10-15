@@ -3,10 +3,9 @@ from collections import OrderedDict
 from django.urls import reverse_lazy
 from django.utils.translation import gettext_lazy as _
 
-OSCAR_SHOP_NAME = 'Torsion Group'
-OSCAR_SHOP_TAGLINE = 'B2B'
-#OSCAR_HOMEPAGE = reverse_lazy('catalogue:index')
-OSCAR_HOMEPAGE = '/'
+OSCAR_SHOP_NAME = 'Torsion B2B'
+OSCAR_SHOP_TAGLINE = 'Torsion B2B'
+OSCAR_HOMEPAGE = reverse_lazy('/')
 
 # Dynamic class loading
 OSCAR_DYNAMIC_CLASS_LOADER = 'oscar.core.loading.default_class_loader'
@@ -70,7 +69,7 @@ OSCAR_EAGER_ALERTS = True
 
 # Registration
 OSCAR_SEND_REGISTRATION_EMAIL = True
-OSCAR_FROM_EMAIL = 'prog@torsion.kiev.ua'
+OSCAR_FROM_EMAIL = 'robot@torsion.kiev.ua'
 
 # Slug handling
 OSCAR_SLUG_FUNCTION = 'oscar.core.utils.default_slugifier'
@@ -206,16 +205,7 @@ OSCAR_DASHBOARD_NAVIGATION = [
         'icon': 'icon-bar-chart',
         'url_name': 'dashboard:reports-index',
     },
-    {
-        'label': 'Content blocks',
-        'url_name': 'oscar_promotions_dashboard:promotion-list',
-    },
-    {
-        'label': 'Content blocks by page',
-        'url_name': 'oscar_promotions_dashboard:promotion-list-by-page',
-    },
 ]
-
 OSCAR_DASHBOARD_DEFAULT_ACCESS_FUNCTION = 'oscar.apps.dashboard.nav.default_access_fn'  # noqa
 
 # Search facets
