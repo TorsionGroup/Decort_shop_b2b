@@ -6,7 +6,7 @@ from defaults import *
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '-x7w_#_=iu_a+am69*!s$=a1ao%os3*hnw8jvn)d!odTjj$(@%sb'
+SECRET_KEY = '-x7w_#_=iu_a+am69*!s$=a1ao%os3*hn1w8jvn)d!odTjj$(@%sb'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -78,10 +78,14 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'decort_b2b.urls'
 
+location = lambda x: os.path.join(os.path.dirname(os.path.realpath(__file__)), '..', x)
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            location('templates'),
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -93,6 +97,7 @@ TEMPLATES = [
                 'oscar.apps.communication.notifications.context_processors.notifications',
                 'oscar.core.context_processors.metadata',
                 'oscar.apps.search.context_processors.search_form',
+                'django.template.context_processors.i18n',
             ],
         },
     },
