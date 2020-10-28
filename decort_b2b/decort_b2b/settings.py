@@ -105,7 +105,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'decort_b2b.wsgi.application'
 
-# Database
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -130,7 +129,6 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
 )
 
-# Password validation
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -168,8 +166,14 @@ LOCALE_PATHS = [
     os.path.join(BASE_DIR, 'locale/'),
 ]
 
-# Static files (CSS, JavaScript, Images)
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+WEB_URL = '/web/'
+WEB_ROOT = os.path.join(BASE_DIR, 'web')
 
 HAYSTACK_CONNECTIONS = {
     'default': {
