@@ -8,3 +8,7 @@ admin.site.site_header = 'Torsion Group B2B'
 
 admin.site.register(Category)
 admin.site.register(Content)
+admin.site.register(ContentImage)
+admin.site.register(RatingStar)
+admin.site.register(RatingContent)
+admin.site.register(ReviewContent)
