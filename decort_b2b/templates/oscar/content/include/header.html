@@ -8,7 +8,7 @@
                         <div class="main-menu_area position-relative">
                             <nav class="main-nav">
                                 <ul>
-                                    <li class=""><a href="{% url 'home' %}">Home</a></li>
+                                    <li class=""><a href="{% url 'main' %}"">Home</a></li>
                                     <li class=""><a href="{% url 'aboutus' %}">About Us</a></li>
                                     <li class=""><a href="{% url 'contacts' %}">Contacts</a></li>
                                     <li class=""><a href="{% url 'news' %}">News</a></li>
@@ -30,10 +30,10 @@
                                     <li><a href="javascript:void(0)">Language <i class="fa fa-chevron-down"></i></a>
                                         <ul class="ht-dropdown">
                                             <li class="active"><a href="javascript:void(0)"><img
-                                                    src="{% static 'img/torsion/menu/icon/1.jpg' %}"
+                                                    src="{% static 'content/img/torsion/menu/icon/1.jpg' %}"
                                                     alt="JB's Language Icon">English</a></li>
                                             <li><a href="javascript:void(0)"><img
-                                                    src="{% static 'img/torsion/menu/icon/2.jpg' %}"
+                                                    src="{% static 'content/img/torsion/menu/icon/2.jpg' %}"
                                                     alt="JB's Language Icon">Français</a>
                                             </li>
                                         </ul>
@@ -59,7 +59,7 @@
                         <div class="main-menu_area position-relative">
                             <nav class="main-nav">
                                 <ul>
-                                    <li class=""><a href="{% url 'home' %}">Home</a></li>
+                                    <li class=""><a href="{% url 'main' %}"">Home</a></li>
                                     <li class=""><a href="{% url 'aboutus' %}">About Us</a></li>
                                     <li class=""><a href="{% url 'contacts' %}">Contacts</a></li>
                                     <li class=""><a href="{% url 'news' %}">News</a></li>
@@ -70,8 +70,8 @@
 
                     <div class="col-sm-3 d-block d-lg-none">
                         <div class="header-logo_area header-sticky_logo">
-                            <a href="{% url 'home' %}">
-                                <img src="{% static 'img/torsion_logo.png' %}">
+                            <a href="{% url 'main' %}"">
+                                <img src="{% static 'content/img/torsion_logo.png' %}">
                             </a>
                         </div>
                     </div>
@@ -112,8 +112,8 @@
 
                     <div class="custom-logo_col col-10">
                         <div class="header-logo_area">
-                            <a href="{% url 'home' %}">
-                                <img src="{% static 'img/torsion_logo.png' %}">
+                            <a href="{% url 'main' %}"">
+                                <img src="{% static 'content/img/torsion_logo.png' %}">
                             </a>
                         </div>
                     </div>
@@ -188,7 +188,7 @@
                             <a class="product-item_remove" href="javascript:void(0)"><i
                                     class="ion-android-close"></i></a>
                             <div class="product-item_img">
-                                <img src="{% static 'img/torsion/product/small-size/1.jpg' %}"
+                                <img src="{% static 'content/img/torsion/product/small-size/1.jpg' %}"
                                      alt="torsion's Product Image">
                             </div>
                             <div class="product-item_content">
@@ -200,7 +200,7 @@
                             <a class="product-item_remove" href="javascript:void(0)"><i
                                     class="ion-android-close"></i></a>
                             <div class="product-item_img">
-                                <img src="{% static 'img/torsion/product/small-size/2.jpg' %}"
+                                <img src="{% static 'content/img/torsion/product/small-size/2.jpg' %}"
                                      alt="torsion's Product Image">
                             </div>
                             <div class="product-item_content">
@@ -212,7 +212,7 @@
                             <a class="product-item_remove" href="javascript:void(0)"><i
                                     class="ion-android-close"></i></a>
                             <div class="product-item_img">
-                                <img src="{% static 'img/torsion/product/small-size/3.jpg' %}"
+                                <img src="{% static 'content/img/torsion/product/small-size/3.jpg' %}"
                                      alt="torsion's Product Image">
                             </div>
                             <div class="product-item_content">
@@ -246,12 +246,12 @@
                     </div>
                     <nav class="offcanvas-navigation">
                         <ul class="mobile-menu">
-                            <li class="menu-item-has-children active"><a href="{% url 'home' %}"><span
-                                    class="mm-text">Home</span></a>
+                            <li class="menu-item-has-children active"><a href="{% url 'main' %}""><span
+                                    class="mm-text">Main</span></a>
                                 <ul class="sub-menu">
                                     <li>
-                                        <a href="{% url 'home' %}">
-                                            <span class="mm-text">Home One</span>
+                                        <a href="{% url 'main' %}"">
+                                            <span class="mm-text">Main One</span>
                                         </a>
                                     </li>
                                 </ul>
@@ -318,7 +318,7 @@
                                 </ul>
                             </li>
                             <li class="menu-item-has-children">
-                                <a href="{% url 'home' %}">
+                                <a href="{% url 'main' %}"">
                                     <span class="mm-text">Pages</span>
                                 </a>
                                 <ul class="sub-menu">
