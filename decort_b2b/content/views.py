@@ -28,11 +28,11 @@ class ContactsView(ListView):
     model = Content
     queryset = Content.objects.filter(category_id=5)
     context_object_name = 'contacts_list'
-    template_name = 'oscar/content/contacts/contacts.html'
+    template_name = 'oscar/content/contacts.html'
 
 
 class AboutusView(ListView):
     model = Content
     queryset = Content.objects.filter(category_id=4)
     context_object_name = 'aboutus_list'
-    template_name = 'oscar/content/aboutus/aboutus.html'
+    template_name = 'oscar/content/aboutus.html'
