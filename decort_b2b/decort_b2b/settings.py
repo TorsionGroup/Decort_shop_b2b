@@ -257,7 +257,7 @@ CKEDITOR_CONFIGS = {
             'dialog',
             'dialogui',
             'elementspath',
-            # 'youtube'
+            'youtube'
         ]),
     }
 }
