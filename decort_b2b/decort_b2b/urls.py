@@ -10,5 +10,14 @@ urlpatterns = [
     path('admin-view/', admin.site.urls),
     path('catalogue/', include(apps.get_app_config('oscar').urls[0])),
     path('', include('content.urls')),
+    path('ckeditor/', include('ckeditor_uploader.urls')),
 
 ]
+
+urlpatterns += i18n_patterns(
+    path('catalogue/', include(apps.get_app_config('oscar').urls[0])),
+    path('', include('content.urls')),
+)
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
