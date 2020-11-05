@@ -9,7 +9,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '-x7w_#_=iu_a+am69*!s$=a1ao%os3*hn1w8jvn)d!odTjj$(@%sb'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'decort.com.ua', 'www.decort.com.ua', 'torsion.kiev.ua',
                  'www.torsion.kiev.ua']
@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'django.contrib.flatpages',
     'decort_b2b',
     'content',
+    'ckeditor',
 
     'oscar',
     'apps.analytics.apps.AnalyticsConfig',
@@ -167,7 +168,8 @@ LOCALE_PATHS = [
 ]
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
+#STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
