@@ -1,12 +1,12 @@
-{% extends 'torsion_shop/main.html' %}
+{% extends 'oscar/content/main.html' %}
 {% load static %}
-{% load torsion_shop_tag %}
+{% load i18n %}
 {% block content_page %}
 
     <div class="torsion-blog_area grid-view_area blog-with_sidebar">
         <div class="container-fluid">
             <div class="row">
-                {% include 'torsion_shop/news/news_sidebar.html' %}
+                {% include 'oscar/content/news/news_sidebar.html' %}
 
                     {% block news_page %}
                     {% endblock news_page %}

@@ -1,4 +1,5 @@
-{% extends 'oscar/content/main.html' %}
+{% extends "oscar/content/main.html" %}
+{% load i18n %}
 {% load static %}
 {% block  title_page %}
     <title>Torsion Group - Home</title>
@@ -38,31 +39,31 @@
                         </ol>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img class="d-block w-100" src="{% static 'content/img/slider/1.jpg' %}" alt="First slide">
+                                <img class="d-block w-100" src="{% static "content/img/slider/1.jpg" %}" alt="First slide">
                             </div>
                             <div class="carousel-item">
-                                <img class="d-block w-100" src="{% static 'content/img/slider/2.jpg' %}">
+                                <img class="d-block w-100" src="{% static "content/img/slider/2.jpg" %}">
                             </div>
                             <div class="carousel-item">
-                                <img class="d-block w-100" src="{% static 'content/img/slider/3.jpg' %}">
+                                <img class="d-block w-100" src="{% static "content/img/slider/3.jpg" %}">
                             </div>
                             <div class="carousel-item">
-                                <img class="d-block w-100" src="{% static 'content/img/slider/4.jpg' %}">
+                                <img class="d-block w-100" src="{% static "content/img/slider/4.jpg" %}">
                             </div>
                             <div class="carousel-item">
-                                <img class="d-block w-100" src="{% static 'content/img/slider/5.jpg' %}">
+                                <img class="d-block w-100" src="{% static "content/img/slider/5.jpg" %}">
                             </div>
                             <div class="carousel-item">
-                                <img class="d-block w-100" src="{% static 'content/img/slider/6.jpg' %}">
+                                <img class="d-block w-100" src="{% static "content/img/slider/6.jpg" %}">
                             </div>
                             <div class="carousel-item">
-                                <img class="d-block w-100" src="{% static 'content/img/slider/7.jpg' %}">
+                                <img class="d-block w-100" src="{% static "content/img/slider/7.jpg" %}">
                             </div>
                             <div class="carousel-item">
-                                <img class="d-block w-100" src="{% static 'content/img/slider/8.jpg' %}">
+                                <img class="d-block w-100" src="{% static "content/img/slider/8.jpg" %}">
                             </div>
                             <div class="carousel-item">
-                                <img class="d-block w-100" src="{% static 'content/img/slider/9.jpg' %}">
+                                <img class="d-block w-100" src="{% static "content/img/slider/9.jpg" %}">
                             </div>
                         </div>
                         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
@@ -82,7 +83,7 @@
         </div>
     </div>
 
-    <!-- Begin torsion's Shipping Area -->
+    <!-- Begin torsion"s Shipping Area -->
     <div class="torsion-shipping_area">
         <div class="container-fluid">
             <div class="shipping-nav">
@@ -142,9 +143,9 @@
             </div>
         </div>
     </div>
-    <!-- torsion's Shipping Area End Here -->
+    <!-- torsion"s Shipping Area End Here -->
 
-    <!-- Begin torsion's Brand Area -->
+    <!-- Begin torsion"s Brand Area -->
     <div class="torsion-brand_area">
         <div class="container-fluid">
             <div class="row">
@@ -153,21 +154,21 @@
                         <span>Top Quality Partner</span>
                         <h3>Shop By Brands</h3>
                     </div>
-                    <div class="brand-slider torsion-slick-slider img-hover-effect_area" data-slick-options='{
+                    <div class="brand-slider torsion-slick-slider img-hover-effect_area" data-slick-options="{
                         "slidesToShow": 6
-                        }' data-slick-responsive='[
+                        }" data-slick-responsive="[
                                                 {"breakpoint":1200, "settings": {"slidesToShow": 5}},
                                                 {"breakpoint":992, "settings": {"slidesToShow": 3}},
                                                 {"breakpoint":767, "settings": {"slidesToShow": 3}},
                                                 {"breakpoint":577, "settings": {"slidesToShow": 2}},
                                                 {"breakpoint":321, "settings": {"slidesToShow": 1}}
-                                            ]'>
+                                            ]">
                         <div class="slide-item">
                             <div class="inner-slide">
                                 <div class="single-product">
                                     {% for brand in views.get_brands %} {{ brand.name }}
                                         <a href="javascript:void(0)">
-                                            <img src="{% static 'content/images/brand/1.jpg' %}" alt="Torsion Brand Image">
+                                            <img src="{% static "content/images/brand/1.jpg" %}" alt="Torsion Brand Image">
                                         </a>
                                     {% endfor %}
                                 </div>
@@ -179,9 +180,9 @@
             </div>
         </div>
     </div>
-    <!-- torsion's Brand Area End Here -->
+    <!-- torsion"s Brand Area End Here -->
 
-    <!-- Begin torsion's Blog Area -->
+    <!-- Begin torsion"s Blog Area -->
     <div class="torsion-blog_area bg--white_smoke">
         <div class="container-fluid">
             <div class="row">
@@ -190,22 +191,22 @@
                         <span>Our Recent Posts</span>
                         <h3>From Our Blogs</h3>
                     </div>
-                    <div class="blog-slider torsion-slick-slider slider-navigation_style-1" data-slick-options='{
+                    <div class="blog-slider torsion-slick-slider slider-navigation_style-1" data-slick-options="{
                         "slidesToShow": 4,
                         "spaceBetween": 30,
                         "arrows" : true
-                        }' data-slick-responsive='[
+                        }" data-slick-responsive="[
                             {"breakpoint":1200, "settings": {"slidesToShow": 3}},
                             {"breakpoint":992, "settings": {"slidesToShow": 2}},
                             {"breakpoint":768, "settings": {"slidesToShow": 2}},
                             {"breakpoint":576, "settings": {"slidesToShow": 1}}
-                        ]'>
+                        ]">
                         <div class="slide-item">
                             <div class="inner-slide">
                                 <div class="blog-img img-hover_effect">
                                     <a href="blog-details-left-sidebar.html">
-                                        <img src="{% static 'content/img/torsion/blog/large-size/1.jpg' %}"
-                                             alt="torsion's Blog Image">
+                                        <img src="{% static "content/img/torsion/blog/large-size/1.jpg" %}"
+                                             alt="torsion"s Blog Image">
                                     </a>
                                     <span class="post-date">12-09-19</span>
                                 </div>
@@ -221,8 +222,8 @@
                             <div class="inner-slide">
                                 <div class="blog-img img-hover_effect">
                                     <a href="blog-details-left-sidebar.html">
-                                        <img src="{% static 'content/img/torsion/blog/large-size/2.jpg' %}"
-                                             alt="torsion's Blog Image">
+                                        <img src="{% static "content/img/torsion/blog/large-size/2.jpg" %}"
+                                             alt="torsion"s Blog Image">
                                     </a>
                                     <span class="post-date">15-09-19</span>
                                 </div>
@@ -240,6 +241,6 @@
             </div>
         </div>
     </div>
-    <!-- torsion's Blog Area End Here -->
+    <!-- torsion"s Blog Area End Here -->
 
 {% endblock content_page %}

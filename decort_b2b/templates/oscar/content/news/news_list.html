@@ -1,5 +1,6 @@
-{% extends 'torsion_shop/news/main.html' %}
+{% extends 'oscar/content/news/main.html' %}
 {% load static %}
+{% load i18n %}
 {% block  title_page %}
     <title>News - Torsion Group</title>
 {% endblock title_page %}
@@ -34,7 +35,7 @@
             {% endif %}
         {% endfor %}
 
-        {% include 'torsion_shop/include/pagination.html' %}
+        {% include 'oscar/content/include/pagination.html' %}
 
     </div>
 
