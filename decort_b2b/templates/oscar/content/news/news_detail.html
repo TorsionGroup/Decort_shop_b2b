@@ -40,7 +40,7 @@
                             <span class="sub-tittle editContent">{{ news_detail.reviews_set.count }}</span>
                             Leave Review`s
                         </h3>
-                        <form action="{% url 'add_review_content' news_detail.alias %}" method="post"
+                        <form action="{% url 'add_review_content' news_detail.id %}" method="post"
                               class="mt-4" id="formReviewContent">
                             {% csrf_token %}
                             <input type="hidden" name="parent" id="contactparent" value="">
