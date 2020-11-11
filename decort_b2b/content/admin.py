@@ -28,7 +28,7 @@ class CategoryAdmin(TranslationAdmin):
 
 @admin.register(Content)
 class ContentAdmin(TranslationAdmin):
-    list_display = ('id', 'title', 'alias', 'main_image', 'published')
+    list_display = ('id', 'title', 'category_id', 'alias', 'main_image', 'published')
     list_filter = ('category_id',)
     list_display_links = ('title',)
     readonly_fields = ('get_main_image',)
