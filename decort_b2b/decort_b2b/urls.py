@@ -8,7 +8,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('i18n/', include('django.conf.urls.i18n')),
     path('admin-view/', admin.site.urls),
-    path('catalogue/', include(apps.get_app_config('oscar').urls[0])),
+    path('catalogue/', include(apps.get_app_config('oscar').urls[0]), name='catalogue'),
     path('', include('content.urls')),
     path('ckeditor/', include('ckeditor_uploader.urls')),
 
