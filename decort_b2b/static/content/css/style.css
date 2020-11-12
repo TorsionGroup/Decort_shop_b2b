@@ -5645,10 +5645,10 @@ button, .global-overlay, .quantity .cart-plus-minus > .qtybutton, .price-filter 
 @media (max-width: 1599px) {
     .header-main_area .custom-logo_col {
         -webkit-box-flex: 0;
-        -webkit-flex: 0 0 60%;
-        -ms-flex: 0 0 60%;
-        flex: 0 0 60%;
-        max-width: 60%;
+        -webkit-flex: 0 0 20%;
+        -ms-flex: 0 0 20%;
+        flex: 0 0 20%;
+        max-width: 20%;
         -webkit-box-ordinal-group: 2;
         -webkit-order: 1;
         -ms-flex-order: 1;
@@ -5659,10 +5659,10 @@ button, .global-overlay, .quantity .cart-plus-minus > .qtybutton, .price-filter 
 @media (max-width: 991px) {
     .header-main_area .custom-logo_col {
         -webkit-box-flex: 0;
-        -webkit-flex: 0 0 30%;
-        -ms-flex: 0 0 30%;
-        flex: 0 0 30%;
-        max-width: 30%;
+        -webkit-flex: 0 0 25%;
+        -ms-flex: 0 0 25%;
+        flex: 0 0 25%;
+        max-width: 25%;
         padding-bottom: 30px;
     }
 }
@@ -5670,20 +5670,20 @@ button, .global-overlay, .quantity .cart-plus-minus > .qtybutton, .price-filter 
 @media (max-width: 767px) {
     .header-main_area .custom-logo_col {
         -webkit-box-flex: 0;
-        -webkit-flex: 0 0 35%;
-        -ms-flex: 0 0 35%;
-        flex: 0 0 35%;
-        max-width: 35%;
+        -webkit-flex: 0 0 25%;
+        -ms-flex: 0 0 25%;
+        flex: 0 0 25%;
+        max-width: 25%;
     }
 }
 
 @media (max-width: 479px) {
     .header-main_area .custom-logo_col {
         -webkit-box-flex: 0;
-        -webkit-flex: 0 0 100%;
-        -ms-flex: 0 0 100%;
-        flex: 0 0 100%;
-        max-width: 100%;
+        -webkit-flex: 0 0 90%;
+        -ms-flex: 0 0 90%;
+        flex: 0 0 90%;
+        max-width: 90%;
     }
 }
 

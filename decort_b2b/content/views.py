@@ -6,7 +6,7 @@ from .models import *
 
 class MainView(ListView):
     model = Content
-    template_name = 'oscar/content/main.html'
+    template_name = 'oscar/content/index.html'
 
 
 class NewsView(ListView):
