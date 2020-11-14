@@ -31,6 +31,8 @@ INSTALLED_APPS = [
     'content',
     'ckeditor',
     'ckeditor_uploader',
+    'novaposhta',
+    'requests',
 
     'oscar',
     'apps.analytics.apps.AnalyticsConfig',

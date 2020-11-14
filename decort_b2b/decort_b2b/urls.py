@@ -11,6 +11,7 @@ urlpatterns = [
     path('catalogue/', include(apps.get_app_config('oscar').urls[0]), name='catalogue'),
     path('', include('content.urls')),
     path('ckeditor/', include('ckeditor_uploader.urls')),
+    path('novaposhta/', include('novaposhta.urls')),
 
 ]
 
