@@ -139,6 +139,10 @@ OSCAR_DASHBOARD_NAVIGATION = [
                 'label': _('Partners'),
                 'url_name': 'dashboard:partner-list',
             },
+            # {
+            #     'label': _('COD transactions'),
+            #     'url_name': 'cashondelivery-transaction-list',
+            # },
             # The shipping method dashboard is disabled by default as it might
             # be confusing. Weight-based shipping methods aren't hooked into
             # the shipping repository by default (as it would make

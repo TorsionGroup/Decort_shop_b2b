@@ -68,6 +68,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'oscarapi',
     'widget_tweaks',
+    'cashondelivery',
 ]
 
 MIDDLEWARE = [
@@ -264,3 +265,27 @@ CKEDITOR_CONFIGS = {
         ]),
     }
 }
+
+# OSCAR_DASHBOARD_NAVIGATION.append(
+#     {
+#         'label': 'Accounts',
+#         'icon': 'icon-globe',
+#         'children': [
+#             {
+#                 'label': 'Accounts',
+#                 'url_name': 'accounts_dashboard:accounts-list',
+#             },
+#             {
+#                 'label': 'Transfers',
+#                 'url_name': 'accounts_dashboard:transfers-list',
+#             },
+#             {
+#                 'label': 'Deferred income report',
+#                 'url_name': 'accounts_dashboard:report-deferred-income',
+#             },
+#             {
+#                 'label': 'Profit/loss report',
+#                 'url_name': 'accounts_dashboard:report-profit-loss',
+#             },
+#         ]
+#     })
