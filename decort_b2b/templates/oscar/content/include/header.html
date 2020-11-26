@@ -9,11 +9,11 @@
                     <div class="main-menu_area position-relative">
                         <nav class="main-nav">
                             <ul>
-                                <li class=""><a href="{% url 'main' %}">Home</a></li>
-                                <li class=""><a href="{% url 'aboutus' %}">About Us</a></li>
-                                <li class=""><a href="{% url 'contacts' %}">Contacts</a></li>
-                                <li class=""><a href="{% url 'news' %}">News</a></li>
-                                <li class=""><a href="/catalogue">Shop</a></li>
+                                <li class=""><a href="{% url 'home' %}">{% trans "Home" %}</a></li>
+                                <li class=""><a href="{% url 'news' %}">{% trans "News" %}</a></li>
+                                <li class=""><a href="{% url 'aboutus' %}">{% trans "About Us" %}</a></li>
+                                <li class=""><a href="{% url 'contacts' %}">{% trans "Contacts" %}</a></li>
+                                <li class=""><a href="{% url 'catalogue:index' %}">{% trans "All products" %}</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -60,11 +60,11 @@
                     <div class="main-menu_area position-relative">
                         <nav class="main-nav">
                             <ul>
-                                <li class=""><a href="{% url 'main' %}">Home</a></li>
-                                <li class=""><a href="{% url 'aboutus' %}">About Us</a></li>
-                                <li class=""><a href="{% url 'contacts' %}">Contacts</a></li>
-                                <li class=""><a href="{% url 'news' %}">News</a></li>
-                                <li class=""><a href="/catalogue">Shop</a></li>
+                                <li class=""><a href="{% url 'home' %}">{% trans "Home" %}</a></li>
+                                <li class=""><a href="{% url 'news' %}">{% trans "News" %}</a></li>
+                                <li class=""><a href="{% url 'aboutus' %}">{% trans "About Us" %}</a></li>
+                                <li class=""><a href="{% url 'contacts' %}">{% trans "Contacts" %}</a></li>
+                                <li class=""><a href="{% url 'catalogue:index' %}">{% trans "All products" %}</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -263,11 +263,14 @@
                 </div>
                 <nav class="offcanvas-navigation">
                     <ul class="mobile-menu">
-                            <li class="menu-item-has-children active"><a href="{% url 'main' %}">Home</a></li>
-                                <li class="menu-item-has-children active"><a href="{% url 'aboutus' %}">About Us</a></li>
-                                <li class="menu-item-has-children active"><a href="{% url 'contacts' %}">Contacts</a></li>
-                                <li class="menu-item-has-children active"><a href="{% url 'news' %}">News</a></li>
-                                <li class="menu-item-has-children active"><a href="/catalogue">Shop</a></li>
+                        <li class="menu-item-has-children active"><a href="{% url 'home' %}">{% trans "Home" %}</a></li>
+                        <li class="menu-item-has-children active"><a href="{% url 'news' %}">{% trans "News" %}</a></li>
+                        <li class="menu-item-has-children active"><a
+                                href="{% url 'aboutus' %}">{% trans "About Us" %}</a></li>
+                        <li class="menu-item-has-children active"><a
+                                href="{% url 'contacts' %}">{% trans "Contacts" %}</a></li>
+                        <li class="menu-item-has-children active"><a
+                                href="{% url 'catalogue:index' %}">{% trans "All products" %}</a></li>
                     </ul>
                 </nav>
                 <nav class="offcanvas-navigation user-setting_area">

@@ -1,7 +1,7 @@
 (function ($) {
 	'use strict';
 	/*-----------------------------
-		Torsion's Window When Loading
+		Uren's Window When Loading
 ---------------------------------*/
 	$(window).on('load', function () {
 		var wind = $(window);
@@ -12,7 +12,7 @@
 		$('.loading').fadeOut(500);
 	});
 	/*----------------------------------------*/
-	/* Torsion's Newsletter Popup
+	/* Uren's Newsletter Popup
 /*----------------------------------------*/
 	setTimeout(function () {
 		$('.popup_wrapper').css({
@@ -24,7 +24,7 @@
 		});
 	}, 5000);
 	/*----------------------------------------*/
-	/*  Torsion's Sticky Menu Activation
+	/*  Uren's Sticky Menu Activation
 /*----------------------------------------*/
 	$(window).on('scroll', function () {
 		if ($(this).scrollTop() > 300) {
@@ -34,7 +34,7 @@
 		}
 	});
 	/*----------------------------------------*/
-	/*  Torsion's Main Slider
+	/*  Uren's Main Slider
 /*----------------------------------------*/
 	$('.main-slider').slick({
 		infinite: true,
@@ -75,7 +75,7 @@
 		$this.parents('.open').removeClass('open');
 	});
 	/*----------------------------------------*/
-	/*  Torsion's Offcanvas
+	/*  Uren's Offcanvas
 /*----------------------------------------*/
 	/*Variables*/
 	var $offcanvasNav = $('.offcanvas-menu, .offcanvas-minicart_menu, .offcanvas-search_menu, .mobile-menu'),
@@ -175,7 +175,7 @@
 		$('.nice-select').niceSelect();
 	});
 	/*----------------------------------------*/
-	/* Torsion's Countdown
+	/* Uren's Countdown
 /*----------------------------------------*/
 	// Check if element exists
 	$.fn.elExists = function () {
@@ -281,10 +281,10 @@
 	}
 
 	/*----------------------------------------*/
-	/*  Torsion's Scroll To Top
+	/*  Uren's Scroll To Top
 /*----------------------------------------*/
 	$.scrollUp({
-		scrollText: '<span class="iconify" data-icon="gg:chevron-double-up-o" data-inline="false" data-height="38"></span>',
+		scrollText: '<i class="fa fa-angle-double-up"></i>',
 		easingType: 'linear',
 		scrollSpeed: 900
 	});
@@ -341,7 +341,7 @@
 	});
 
 	/*---------------------------------------------*/
-	/*  Torsion'sCounterUp
+	/*  Uren'sCounterUp
 /*----------------------------------------------*/
 	$('.count').counterUp({
 		delay: 10,
@@ -349,7 +349,7 @@
 	});
 
 	/*----------------------------------------*/
-	/*  Torsion's Product View Mode
+	/*  Uren's Product View Mode
 /*----------------------------------------*/
 	function porductViewMode() {
 		$(window).on({
@@ -457,7 +457,7 @@
 	});
 
 	/*-------------------------------------------------*/
-	/* Torsion's Sticky Sidebar
+	/* Uren's Sticky Sidebar
 /*-------------------------------------------------*/
 	$('#sticky-sidebar').theiaStickySidebar({
 		// Settings
@@ -465,7 +465,7 @@
 	});
 
 	/*-------------------------------------------------*/
-	/* Torsion's Bootstraps 4 Tooltip
+	/* Uren's Bootstraps 4 Tooltip
 /*-------------------------------------------------*/
 	$(function () {
 		$('[data-toggle="tooltip"]').tooltip();
@@ -488,11 +488,11 @@
 		amountprice.val('$' + sliderrange.slider('values', 0) + ' - $' + sliderrange.slider('values', 1));
 	});
 	/*----------------------------------------*/
-	/*  Torsion's Slick Carousel
+	/*  Uren's Slick Carousel
  /*----------------------------------------*/
 	var $html = $('html');
 	var $body = $('body');
-	var $elementCarousel = $('.Torsion-slick-slider');
+	var $elementCarousel = $('.uren-slick-slider');
 	// Check if element exists
 	$.fn.elExists = function () {
 		return this.length > 0;
@@ -666,7 +666,7 @@
 		});
 	}
 	/*----------------------------------------*/
-	/*  Torsion's Single Blog Slider
+	/*  Uren's Single Blog Slider
 /*----------------------------------------*/
 	$('.single-blog_slider').slick({
 		infinite: true,
@@ -719,7 +719,7 @@
 		}
 	});
 	/*----------------------------------------*/
-	/*  Torsion's Product Switch Color
+	/*  Uren's Product Switch Color
  /*----------------------------------------*/
 
 	$('.color-list a').on('click', function (e) {
@@ -777,4 +777,3 @@
 	---------------------------- */
 	$('.zoom').zoom();
 })(jQuery);
-
