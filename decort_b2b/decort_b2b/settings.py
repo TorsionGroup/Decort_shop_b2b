@@ -69,6 +69,8 @@ INSTALLED_APPS = [
     'oscarapi',
     'widget_tweaks',
     'cashondelivery',
+    'snowpenguin.django.recaptcha3',
+
 ]
 
 MIDDLEWARE = [
@@ -162,6 +164,12 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+ACCOUNT_EMAIL_CONFIRMATION_EXPIRE_DAYS = 1
+ACCOUNT_USERNAME_MIN_LENGTH = 4
+LOGIN_REDIRECT_URL = "/"
+
+EMAIL_BACKEND = 'django.core.mail.backends.dummy.EmailBackend'
 
 gettext = lambda s: s
 LANGUAGES = [
@@ -289,3 +297,10 @@ CKEDITOR_CONFIGS = {
 #             },
 #         ]
 #     })
+
+RECAPTCHA_PUBLIC_KEY = "6LfP5vQUAAAAAGjusacZ9ILOMP4nVMCTNux8CoG3"
+RECAPTCHA_PRIVATE_KEY = "6LfP5vQUAAAAAOPR1sK5NO22L6g1ps3fu05aFZt1"
+RECAPTCHA_DEFAULT_ACTION = 'generic'
+RECAPTCHA_SCORE_THRESHOLD = 0.5
+
+
