@@ -14,10 +14,10 @@
         <link rel="shortcut icon" href="{% static "oscar/favicon.ico" %}"/>
     {% endblock %}
 
-    {# Block where global CSS will go. #}
     {% block styles %}{% endblock %}
 
-    {# Additional CSS - specific to certain pages #}
+        <link rel="stylesheet" href="{% static "oscar/css/style.css" %}">
+
     {% block extrastyles %}
         <link rel="stylesheet" href="{% static 'oscar/css/plugins/bootstrap.css' %}">
         <link rel="stylesheet" href="{% static 'oscar/css/plugins/bootstrap-select.css' %}" media="all">
@@ -55,6 +55,7 @@
 
 {# Local scripts #}
 {% block scripts %}
+
 {% endblock %}
 
 {# Additional JS scripts #}

@@ -64,12 +64,17 @@ INSTALLED_APPS = [
     'oscar.apps.dashboard.vouchers.apps.VouchersDashboardConfig',
     'oscar.apps.dashboard.communications.apps.CommunicationsDashboardConfig',
     'oscar.apps.dashboard.shipping.apps.ShippingDashboardConfig',
+    'oscar_accounts.apps.AccountsConfig',
+    'oscar_accounts.dashboard.apps.AccountsDashboardConfig',
 
     'rest_framework',
     'oscarapi',
     'widget_tweaks',
     'cashondelivery',
     'snowpenguin.django.recaptcha3',
+    'django_tables2',
+    'sorl.thumbnail',
+    'treebeard',
 
 ]
 
@@ -274,33 +279,31 @@ CKEDITOR_CONFIGS = {
     }
 }
 
-# OSCAR_DASHBOARD_NAVIGATION.append(
-#     {
-#         'label': 'Accounts',
-#         'icon': 'icon-globe',
-#         'children': [
-#             {
-#                 'label': 'Accounts',
-#                 'url_name': 'accounts_dashboard:accounts-list',
-#             },
-#             {
-#                 'label': 'Transfers',
-#                 'url_name': 'accounts_dashboard:transfers-list',
-#             },
-#             {
-#                 'label': 'Deferred income report',
-#                 'url_name': 'accounts_dashboard:report-deferred-income',
-#             },
-#             {
-#                 'label': 'Profit/loss report',
-#                 'url_name': 'accounts_dashboard:report-profit-loss',
-#             },
-#         ]
-#     })
+OSCAR_DASHBOARD_NAVIGATION.append(
+    {
+        'label': 'Accounts',
+        'icon': 'icon-globe',
+        'children': [
+            {
+                'label': 'Accounts',
+                'url_name': 'accounts_dashboard:accounts-list',
+            },
+            {
+                'label': 'Transfers',
+                'url_name': 'accounts_dashboard:transfers-list',
+            },
+            {
+                'label': 'Deferred income report',
+                'url_name': 'accounts_dashboard:report-deferred-income',
+            },
+            {
+                'label': 'Profit/loss report',
+                'url_name': 'accounts_dashboard:report-profit-loss',
+            },
+        ]
+    })
 
 RECAPTCHA_PUBLIC_KEY = "6LfP5vQUAAAAAGjusacZ9ILOMP4nVMCTNux8CoG3"
 RECAPTCHA_PRIVATE_KEY = "6LfP5vQUAAAAAOPR1sK5NO22L6g1ps3fu05aFZt1"
 RECAPTCHA_DEFAULT_ACTION = 'generic'
 RECAPTCHA_SCORE_THRESHOLD = 0.5
-
-

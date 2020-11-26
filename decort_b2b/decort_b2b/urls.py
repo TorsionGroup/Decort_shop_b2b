@@ -13,6 +13,7 @@ urlpatterns = [
     path('ckeditor/', include('ckeditor_uploader.urls')),
     path('novaposhta/', include('novaposhta.urls')),
     path('api/', include('oscarapi.urls')),
+    path('dashboard/accounts/', apps.get_app_config('accounts_dashboard').urls),
 
 ]
 
