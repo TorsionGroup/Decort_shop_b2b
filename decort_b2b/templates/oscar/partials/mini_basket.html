@@ -1,21 +1,52 @@
 {% load currency_filters %}
 {% load i18n %}
+{% load static %}
 
-<div class="basket-mini pull-right hidden-xs">
-    <strong>{% trans "Basket total:" %}</strong>
-    {% if request.basket.is_tax_known %}
-        {{ request.basket.total_incl_tax|currency:request.basket.currency }}
-    {% else %}
-        {{ request.basket.total_excl_tax|currency:request.basket.currency }}
-    {% endif %}
 
-    <span class="btn-group">
-        <a class="btn btn-default" href="{% url 'basket:summary' %}">{% trans "View basket" %}</a>
-        <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-            <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu pull-right">
-            <li>{% include "oscar/basket/partials/basket_quick.html" %}</li>
+<div class="custom-cart_col col-12">
+    <div class="header-right_area">
+        <ul>
+            <li class="mobile-menu_wrap d-flex d-lg-none">
+                <a href="#mobileMenu" class="mobile-menu_btn toolbar-btn color--white">
+                    <i class="ion-navicon"></i>
+                </a>
+            </li>
+
+            <li class="minicart-wrap">
+
+                <a href="#miniCart" class="minicart-btn toolbar-btn">
+
+                    <div class="minicart-count_area">
+                        <span class="item-count"> </span>
+                        <i class="ion-bag"> </i>
+                    </div>
+
+                    {% if not request.basket.is_empty %}
+                        {% if request.basket.is_tax_known %}
+                            {% blocktrans with total=request.basket.total_incl_tax|currency:request.basket.currency %}
+                                <div class="minicart-front_text">
+                                    <span class="total-price">{{ total }}</span>
+                                </div>
+                            {% endblocktrans %}
+                        {% else %}
+                            {% blocktrans with total=request.basket.total_excl_tax|currency:request.basket.currency %}
+                                <div class="minicart-front_text">
+                                    <span class="total-price">{{ total }}</span>
+                                </div>
+                            {% endblocktrans %}
+                        {% endif %}
+                    {% endif %}
+
+                </a>
+
+            </li>
+
+            {% include "oscar/basket/partials/basket_quick.html" %}
+
+            <li class="contact-us_wrap">
+                <a href="tel://+380672244702"><i class="ion-android-call"></i>+38 067 22 44 702</a>
+            </li>
+
         </ul>
-    </span>
+    </div>
 </div>
