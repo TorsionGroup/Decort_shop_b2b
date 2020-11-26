@@ -15,6 +15,7 @@ django-oscar-accounts==2.1
 django-oscar-api==2.0.2
 -e git+https://github.com/michaelkuty/django-oscar-cash-on-delivery@d5a3c141bfdea143995bbcc89ba90c607c069be7#egg=django_oscar_cash_on_delivery
 django-phonenumber-field==3.0.1
+django-recaptcha3==0.4.0
 django-tables2==2.2.1
 django-treebeard==4.3.1
 django-widget-tweaks==1.4.8
