@@ -16,7 +16,7 @@
 
     {% block styles %}{% endblock %}
 
-        <link rel="stylesheet" href="{% static "oscar/css/style.css" %}">
+    <link rel="stylesheet" href="{% static "oscar/css/style.css" %}">
 
     {% block extrastyles %}
         <link rel="stylesheet" href="{% static 'oscar/css/plugins/bootstrap.css' %}">
@@ -42,9 +42,14 @@
     {% endblock %}
 </head>
 
-<body id="{% block body_id %}default{% endblock %}" class="{% block body_class %}default{% endblock %}">
-{# Main content goes in this 'layout' block #}
-{% block layout %}{% endblock %}
+<body id="{% block body_id %}default{% endblock %}" class="{% block body_class %}default{% endblock %}"
+      class="template-color-1">
+
+<div class="main-wrapper">
+
+    {% block layout %}{% endblock %}
+
+</div>
 
 {# Scripts loaded from a CDN. #}
 {% block cdn_scripts %}

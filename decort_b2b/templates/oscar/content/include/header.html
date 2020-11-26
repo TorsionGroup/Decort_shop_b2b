@@ -40,7 +40,7 @@
                                                 {% csrf_token %}
                                                 <div class="form-group">
                                             <span>
-                                            <img src="{% static 'oscar/img/flags/{{ language.code }}.png' %}">
+                                            <img src="{% static 'oscar/img/flags/{{language.code}}.png' %}">
                                             </span>
                                                     <select name="language" class="form-control"
                                                             onchange="this.form.submit()">
